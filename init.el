@@ -5,6 +5,8 @@
 
 (setq inhibit-startup-message t)
 
+;; vim it up
+(setq evil-want-C-u-scroll t)
 (require 'evil)
 (evil-mode 1)
 (require 'surround)
@@ -14,29 +16,32 @@
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 
+;; font, color
 (if window-system (set-face-attribute 'default nil :font "Source Code Pro-13"))
 (color-theme-sanityinc-tomorrow-eighties)
 
+;; show eols and hard tabs
 (global-whitespace-mode)
 (setq whitespace-display-mappings '((space-mark 32 [32])
                                     (newline-mark 10 [172 10])
                                     (tab-mark 9 [9656 9] [92 9])))
 
+;; paren highlights
 (define-globalized-minor-mode global-highlight-parentheses-mode
   highlight-parentheses-mode
   (lambda ()
     (highlight-parentheses-mode t)))
 (global-highlight-parentheses-mode t)
 
-(setq column-number-mode t)
-(global-linum-mode 1)
-
+;; auto indents
 (setq-default indent-tabs-mode nil)
 (setq auto-indent-on-visit-file t)
 (auto-indent-global-mode)
 
+;; window size
 (if window-system (set-frame-size (selected-frame) 93 40))
 
+;; cmd-/ comment toggle
 (defun comment-or-uncomment-region-or-line ()
   "Comments or uncomments the region or the current line if there's no active region."
   (interactive)
@@ -48,9 +53,10 @@
     (next-line)))
 (global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
 
-
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-
+;; line numbers
+(setq column-number-mode t)
+(global-linum-mode 1)
+;; rendering workaround
 (add-hook 'linum-before-numbering-hook
           (lambda ()
             (let ((w (length (number-to-string
