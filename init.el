@@ -5,6 +5,10 @@
 
 (setq inhibit-startup-message t)
 
+;; emacs needs to see /usr/local/bin for git
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(setq exec-path (append '("/usr/local/bin") exec-path))
+
 ;; vim it up
 (setq evil-want-C-u-scroll t)
 (require 'evil)
@@ -52,6 +56,8 @@
     (comment-or-uncomment-region beg end)
     (next-line)))
 (global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
+
+(global-set-key (kbd "s-g") 'magit-status)
 
 ;; line numbers
 (setq column-number-mode t)
