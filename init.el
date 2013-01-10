@@ -2,6 +2,7 @@
 (package-initialize)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
+(require 'aaron-packages)
 
 (setq inhibit-startup-message t)
 
