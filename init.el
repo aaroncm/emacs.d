@@ -10,6 +10,10 @@
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 (setq exec-path (append '("/usr/local/bin") exec-path))
 
+;; need this for sml-mode, for the duration of my sml class anyway
+(setq exec-path
+      (append '("/usr/local/Cellar/smlnj/110.75/libexec/bin") exec-path))
+
 ;; vim it up
 (setq evil-want-C-u-scroll t)
 (require 'evil)
