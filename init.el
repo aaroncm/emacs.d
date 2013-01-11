@@ -64,19 +64,6 @@
 (setq column-number-mode t)
 (global-linum-mode 1)
 ;; rendering workaround
-(add-hook 'linum-before-numbering-hook
-          (lambda ()
-            (let ((w (length (number-to-string
-                              (count-lines (point-min) (point-max))))))
-              (setq linum-format
-                    `(lambda (line)
-                       (propertize (concat
-                                    (truncate-string-to-width
-                                     "" (- ,w (length (number-to-string line)))
-                                     nil ?\x2007)
-                                    (number-to-string line))
-                                   'face 'linum))))))
-
 (eval-after-load 'linum
   '(progn
      (defface linum-leading-zero
@@ -98,6 +85,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auto-indent-blank-lines-on-move nil)
  '(auto-indent-next-pair-timer-geo-mean (quote ((default 0.0005 0))))
  '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
