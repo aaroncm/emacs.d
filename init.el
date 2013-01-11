@@ -50,6 +50,9 @@
 ;; window size
 (if window-system (set-frame-size (selected-frame) 93 40))
 
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier 'super)
+
 ;; cmd-/ comment toggle
 (defun comment-or-uncomment-region-or-line ()
   "Comments or uncomments the region or the current line if there's no active region."
@@ -60,9 +63,9 @@
       (setq beg (line-beginning-position) end (line-end-position)))
     (comment-or-uncomment-region beg end)
     (next-line)))
-(global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
+(global-set-key (kbd "M-/") 'comment-or-uncomment-region-or-line)
 
-(global-set-key (kbd "s-g") 'magit-status)
+(global-set-key (kbd "M-g") 'magit-status)
 
 ;; line numbers
 (setq column-number-mode t)
