@@ -87,6 +87,7 @@
  ;; If there is more than one, they won't work right.
  '(auto-indent-blank-lines-on-move nil)
  '(auto-indent-next-pair-timer-geo-mean (quote ((default 0.0005 0))))
+ '(auto-indent-on-visit-file nil)
  '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(tool-bar-mode nil))
