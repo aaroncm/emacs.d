@@ -52,6 +52,7 @@
 
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
+(global-set-key "\M-`" 'other-frame)
 
 ;; cmd-/ comment toggle
 (defun comment-or-uncomment-region-or-line ()
