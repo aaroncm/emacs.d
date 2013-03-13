@@ -4,7 +4,8 @@
 (defvar aaron-packages
   '(linum clojure-mode color-theme-sanityinc-tomorrow evil evil-leader
           evil-numbers auto-indent-mode haskell-mode sml-mode
-          highlight-parentheses key-chord magit pep8 pylint slime)
+          highlight-parentheses key-chord magit pep8 pylint slime
+          go-mode sml-mode)
   "packages to install at launch")
 
 ;; we need dash for the loop constructs
