@@ -49,6 +49,11 @@
 (setq auto-indent-on-visit-file t)
 (auto-indent-global-mode)
 
+;; scrolling
+(setq scroll-step 1)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
+
 ;; window size
 (if window-system (set-frame-size (selected-frame) 93 40))
 
