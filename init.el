@@ -48,6 +48,7 @@
 (setq-default indent-tabs-mode nil)
 (setq auto-indent-on-visit-file t)
 (auto-indent-global-mode)
+(add-to-list 'auto-indent-disabled-modes-list 'haskell-mode)
 
 ;; scrolling
 (setq scroll-step 1)
@@ -105,6 +106,7 @@
  '(auto-indent-on-visit-file nil)
  '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
+ '(haskell-mode-hook (quote (turn-on-haskell-indent)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
