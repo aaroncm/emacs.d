@@ -3,7 +3,7 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/"))
+             '("melpa" . "http://melpa.milkbox.net/packages/"))
 (require 'aaron-packages)
 
 (setq inhibit-startup-message t)
