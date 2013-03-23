@@ -1,0 +1,3 @@
+[submodule "lisp/emacs-for-python"]
+	path = lisp/emacs-for-python
+	url = https://github.com/gabrielelanaro/emacs-for-python

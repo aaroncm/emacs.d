@@ -49,6 +49,7 @@
 (setq auto-indent-on-visit-file t)
 (auto-indent-global-mode)
 (add-to-list 'auto-indent-disabled-modes-list 'haskell-mode)
+(add-to-list 'auto-indent-disabled-modes-list 'python-mode)
 
 ;; scrolling
 (setq scroll-step 1)
@@ -96,6 +97,13 @@
                       'face 'linum-leading-zero)
           (propertize (number-to-string line) 'face 'linum))))
      (setq linum-format 'linum-format-func)))
+
+;; https://github.com/gabrielelanaro/emacs-for-python
+(load-file "/Users/aaron/.emacs.d/lisp/emacs-for-python/epy-init.el")
+(epy-setup-checker "/usr/local/share/python/pyflakes %f")
+(epy-setup-ipython)
+(global-hl-line-mode t)
+(setq skeleton-pair nil)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
