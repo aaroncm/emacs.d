@@ -33,9 +33,10 @@
 
 ;; show eols and hard tabs
 (global-whitespace-mode)
-(setq whitespace-display-mappings '((space-mark 32 [32])
-                                    (newline-mark 10 [172 10])
-                                    (tab-mark 9 [9656 9] [92 9])))
+(setq whitespace-style '(face trailing tabs lines-tail newline newline-mark
+                              tab-mark empty))
+(setq whitespace-display-mappings '((tab-mark 9 [9656 9] [92 9])
+                                    (newline-mark 10 [172 10])))
 
 ;; paren highlights
 (define-globalized-minor-mode global-highlight-parentheses-mode
