@@ -100,7 +100,7 @@
      (setq linum-format 'linum-format-func)))
 
 ;; https://github.com/gabrielelanaro/emacs-for-python
-(load-file "/Users/aaron/.emacs.d/lisp/emacs-for-python/epy-init.el")
+(load-file "~/.emacs.d/lisp/emacs-for-python/epy-init.el")
 (epy-setup-checker "/usr/local/share/python/pyflakes %f")
 (epy-setup-ipython)
 (global-hl-line-mode t)
