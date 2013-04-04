@@ -46,11 +46,12 @@
 (global-highlight-parentheses-mode t)
 
 ;; auto indents
-(setq-default indent-tabs-mode nil)
-(setq auto-indent-on-visit-file t)
-(auto-indent-global-mode)
-(add-to-list 'auto-indent-disabled-modes-list 'haskell-mode)
-(add-to-list 'auto-indent-disabled-modes-list 'python-mode)
+;; (setq-default indent-tabs-mode nil)
+;; (setq auto-indent-on-visit-file t)
+;; (auto-indent-global-mode)
+;; (add-to-list 'auto-indent-disabled-modes-list 'haskell-mode)
+;; (add-to-list 'auto-indent-disabled-modes-list 'python-mode)
+(electric-indent-mode +1)
 
 ;; scrolling
 (setq scroll-step 1)
