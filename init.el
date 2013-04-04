@@ -6,11 +6,25 @@
              '("melpa" . "http://melpa.milkbox.net/packages/"))
 (require 'aaron-packages)
 
+(add-to-list 'load-path "~/Devel/source-repos/ensime/dist/elisp/")
+(require 'ensime)
+
 (setq inhibit-startup-message t)
 
 ;; emacs needs to see /usr/local/bin for git
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 (setq exec-path (append '("/usr/local/bin") exec-path))
+
+;; need to add this for python syntax checking (flake8)
+(setq exec-path (append '("/usr/local/share/python") exec-path))
+
+;; fuck tabs yo
+(setq-default indent-tabs-mode nil)
+
+;; no checkdoc, please
+(eval-after-load 'flycheck
+  '(setq flycheck-checkers
+         (delq 'emacs-lisp-checkdoc flycheck-checkers)))
 
 ;; need this for sml-mode, for the duration of my sml class anyway
 (setq exec-path
