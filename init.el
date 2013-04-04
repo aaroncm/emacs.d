@@ -19,6 +19,9 @@
 ;; let's interactively do
 (ido-mode t)
 
+;; and automatically complete
+(global-auto-complete-mode t)
+
 ;; vim it up
 (setq evil-want-C-u-scroll t)
 (require 'evil)
