@@ -106,12 +106,9 @@
           (propertize (number-to-string line) 'face 'linum))))
      (setq linum-format 'linum-format-func)))
 
-;; https://github.com/gabrielelanaro/emacs-for-python
-(load-file "~/.emacs.d/lisp/emacs-for-python/epy-init.el")
-(epy-setup-checker "/usr/local/share/python/pyflakes %f")
-(epy-setup-ipython)
-(global-hl-line-mode t)
-(setq skeleton-pair nil)
+;; flycheck
+(add-hook 'prog-mode-hook 'flycheck-mode)
+(add-hook 'text-mode-hook 'flycheck-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

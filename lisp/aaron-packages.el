@@ -5,7 +5,7 @@
   '(linum clojure-mode color-theme-sanityinc-tomorrow evil evil-leader
           evil-numbers auto-indent-mode haskell-mode sml-mode
           highlight-parentheses key-chord magit pep8 pylint slime
-          go-mode scala-mode2 python-mode pymacs yaml-mode)
+          go-mode scala-mode2 python-mode pymacs yaml-mode auto-complete)
   "packages to install at launch")
 
 ;; we need dash for the loop constructs
