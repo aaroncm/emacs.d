@@ -16,6 +16,9 @@
 (setq exec-path
       (append '("/usr/local/Cellar/smlnj/110.75/libexec/bin") exec-path))
 
+;; let's interactively do
+(ido-mode t)
+
 ;; vim it up
 (setq evil-want-C-u-scroll t)
 (require 'evil)
