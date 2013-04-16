@@ -34,6 +34,7 @@
 (ido-mode t)
 
 ;; and automatically complete
+(require 'auto-complete)
 (global-auto-complete-mode t)
 
 ;; vim it up
