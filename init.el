@@ -50,7 +50,6 @@
 
 ;; font, color
 (if window-system (set-face-attribute 'default nil :font "Source Code Pro-13"))
-(color-theme-sanityinc-tomorrow-eighties)
 
 ;; show eols and hard tabs
 (global-whitespace-mode)
@@ -119,6 +118,8 @@
  '(auto-indent-on-visit-file nil)
  '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-eighties)))
+ '(custom-safe-themes (quote ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" default)))
  '(haskell-mode-hook (quote (turn-on-haskell-indent)))
  '(tool-bar-mode nil))
 (custom-set-faces
